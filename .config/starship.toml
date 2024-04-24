@@ -1,0 +1,130 @@
+# SOURCES
+# https://starship.rs/config
+# https://starship.rs/presets/nerd-font.html#configuration
+
+# DEBUG via:
+# starship explain
+# STARSHIP_LOG=trace
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Timeout for commands executed by starship (ms)
+command_timeout = 1000
+
+# newline between commands
+add_newline = false
+
+# ! opt-in for individual modules (e.g., aws, docker, gcloud, nodejs, python)
+# standalone format to get os glyph on ps1 line,
+# prompt character below
+format = """
+$os$username$hostname:$directory$git_branch$git_status$git_commit$cmd_duration
+$character
+"""
+
+# Replace the "❯"
+[character]
+success_symbol = "[λ](green)"
+error_symbol = "[λ](red)"
+
+[username]
+style_user = "purple bold"
+style_root = "red bold"
+format = "[$user]($style)"
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "[@$hostname](purple bold)"
+disabled = false
+
+# truncation length works backwards (i.e., cwd > parent > parent ...)
+[directory]
+style = "green"
+truncation_length = 25
+truncation_symbol = "…/"
+truncate_to_repo = true
+
+[git_branch]
+truncation_length = 25
+truncation_symbol = ''
+
+[git_status]
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+staged = '[++\($count\)](green)'
+
+[git_commit]
+commit_hash_length = 4
+
+[env_var.SHELL]
+variable = "SHELL"
+default = "unknown shell"
+disabled = true
+
+[cmd_duration]
+min_time = 500
+format = '[$duration](#FFA066)'
+
+# Show python version starting with venv
+[python]
+disabled = true
+
+[aws]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[os]
+format = '[$symbol](bold cyan)'
+disabled = false
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
