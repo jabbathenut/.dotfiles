@@ -17,9 +17,9 @@ function M.set_winbar()
 	else
 		file_path = file_path:gsub("/", " » ")
 		if modified == "+" then
-			file_marker = "      ◉ "
+			file_marker = "       ◉ "
 		else
-			file_marker = "      ◎ "
+			file_marker = "       ◎ "
 		end
 	end
 
