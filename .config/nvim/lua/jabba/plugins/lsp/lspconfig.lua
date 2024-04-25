@@ -17,6 +17,11 @@ return {
 
 		-- Set LSP capabilities
 		local lsp_capabilities = cmp_nvim_lsp.default_capabilities()
+		-- Add foldingRange to default capabilities (ufo related capability)
+		lsp_capabilities.textDocument.foldingRange = {
+			dynamicRegistration = false,
+			lineFoldingOnly = true,
+		}
 
 		-- Use LspAttach autocommand to map the following keys
 		-- after the language server attaches to the current buffer

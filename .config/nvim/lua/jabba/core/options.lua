@@ -57,4 +57,9 @@ opt.backup = false
 opt.writebackup = false
 opt.swapfile = false
 opt.autochdir = false
---opt.winbar = "%m%f"
+
+-- Code Folding (ufo related settings)
+opt.foldcolumn = "1"
+opt.foldlevel = 99 -- ufo provider needs a large value
+opt.foldlevelstart = 99
+opt.foldenable = true
