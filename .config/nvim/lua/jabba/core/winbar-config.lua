@@ -10,6 +10,8 @@ function M.set_winbar()
 	local file_marker = ""
 	local modified = vim.api.nvim_eval_statusline("%M", {}).str
 
+	-- Add titles for NvimTree and CTags tagbar
+	-- Add a file modified indicator
 	if string.match(file_path, "^NvimTree") then
 		file_path = "      FILE EXPLORER"
 	elseif string.match(file_path, "^__Tagbar") then
