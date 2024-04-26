@@ -83,6 +83,13 @@ _Please Note: clangd is being used for LSP completion, diagnostics and formattin
 * Theme: kanagawa [rebelot/kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim.git)
 * And more...
 
+#### Clang-Format
+I have included a complete .clang-format file in the root dotfiles directory. It represents my C++ code format style. It is based mostly on the LLVM style, with a blend of the Microsoft style (e.g., brace wrapping and column limit) and a very minor dash of Google style.
+* For convenience, I broke the file into two sections: 1) Modified Settings and 2) Remaining Default Settings.
+    * The Remaining Default Settings section contains the LLVM default values.
+    * The Modified Settings section contains a blend of Microsoft and Google style values.
+    * To use it, simply copy the file to the root folder of your desired C++ project.
+
 #### Dependencies
 The following software needs to be installed before applying this Neovim configuration:
 
