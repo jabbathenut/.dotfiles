@@ -19,8 +19,7 @@ add_newline = false
 # prompt character below
 format = """
 $os$username$hostname:$directory$git_branch$git_status$git_commit$cmd_duration
-$character
-"""
+$character"""
 
 # Replace the "❯"
 [character]
