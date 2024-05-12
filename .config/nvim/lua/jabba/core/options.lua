@@ -48,10 +48,10 @@ opt.clipboard:append("unnamedplus")
 opt.backspace = "indent,eol,start"
 
 -- Files and Buffers
+opt.modifiable = true
 opt.hidden = true
 opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"
-opt.modifiable = true
 opt.undofile = true
 opt.backup = false
 opt.writebackup = false
