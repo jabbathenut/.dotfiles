@@ -10,8 +10,8 @@ BasedOnStyle: LLVM
 # Modified Settings (with a few exceptions)
 #--------------------------------------------------------
 
-TabWidth: 2
-IndentWidth: 2
+TabWidth: 4
+IndentWidth: 4
 UseTab: Never
 ColumnLimit: 120
 Standard: Auto
