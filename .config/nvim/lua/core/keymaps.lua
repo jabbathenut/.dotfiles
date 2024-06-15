@@ -53,7 +53,11 @@ local leadermaps = {
 		d = { ":bd<CR>", "Delete Current Buffer" },
 		o = { closeOtherBuffers, "Close Other Buffers" },
 	},
-	c = { ":TagbarToggle<CR>", "Ctags" },
+	c = {
+		name = "+Code",
+		s = { ":ClangdSwitchSourceHeader<CR>", "Switch Source Header" },
+		t = { ":TagbarToggle<CR>", "Ctags" },
+	},
 	e = {
 		name = "+Explorer",
 		e = { ":NvimTreeToggle<CR>", "Toggle" },
