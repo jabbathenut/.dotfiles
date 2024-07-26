@@ -46,46 +46,33 @@ keymap.set("v", ">", ">gv", opts)
 local wk = require("which-key")
 local builtin = require("telescope.builtin")
 
--- Leader Keymaps
-local leadermaps = {
-	b = {
-		name = "+Buffer",
-		d = { ":bd<CR>", "Delete Current Buffer" },
-		o = { closeOtherBuffers, "Close Other Buffers" },
-	},
-	c = {
-		name = "+Code",
-		s = { ":ClangdSwitchSourceHeader<CR>", "Switch Source Header" },
-		t = { ":TagbarToggle<CR>", "Ctags" },
-	},
-	e = {
-		name = "+Explorer",
-		e = { ":NvimTreeToggle<CR>", "Toggle" },
-		c = { ":NvimTreeCollapse<CR>", "Collapse" },
-		f = { ":NvimTreeFocus<CR>", "Focus" },
-		h = { ":e ~/<CR>", "Home" },
-	},
-	f = {
-		name = "+Find",
-		b = { builtin.buffers, "Buffers" },
-		f = { builtin.find_files, "Files" },
-		g = { builtin.live_grep, "Live Grep" },
-		h = { builtin.help_tags, "Help Tags" },
-		k = { builtin.keymaps, "Keymaps" },
-		d = { builtin.lsp_definitions, "LSP Definitions" },
-		i = { builtin.lsp_implementations, "LSP Implementations" },
-		t = { ":TodoTelescope<CR>", "TODOs" },
-	},
-	m = { ":MarkdownPreviewToggle<CR>", "Markdown Preview" },
-	t = { toggle_float, "Terminal" },
-	w = {
-		name = "+Window",
-		e = { "<C-w>=", "Equalize Splits" },
-		h = { "<C-w>s", "Horizontal Split" },
-		v = { "<C-w>v", "Vertical Split" },
-		x = { ":close<CR>", "Close Split" },
-		m = { ":MaximizerToggle<CR>", "Maximize" },
-	},
-}
-
-wk.register(leadermaps, { prefix = "<leader>" })
+wk.add({
+	{ "<leader>b", group = "+Buffer" },
+	{ "<leader>bd", ":bd<CR>", desc = "Delete Current Buffer" },
+	{ "<leader>bo", closeOtherBuffers, desc = "Close Other Buffers" },
+	{ "<leader>c", group = "+Code" },
+	{ "<leader>cs", ":ClangdSwitchSourceHeader<CR>", desc = "Switch Source Header" },
+	{ "<leader>ct", ":TagbarToggle<CR>", desc = "Ctags" },
+	{ "<leader>e", group = "+Explorer" },
+	{ "<leader>ec", ":NvimTreeCollapse<CR>", desc = "Collapse" },
+	{ "<leader>ee", ":NvimTreeToggle<CR>", desc = "Toggle" },
+	{ "<leader>ef", ":NvimTreeFocus<CR>", desc = "Focus" },
+	{ "<leader>eh", ":e ~/<CR>", desc = "Home" },
+	{ "<leader>f", group = "+Find" },
+	{ "<leader>fb", builtin.buffers, desc = "Buffers" },
+	{ "<leader>fd", builtin.lsp_definitions, desc = "LSP Definitions" },
+	{ "<leader>ff", builtin.find_files, desc = "Files" },
+	{ "<leader>fg", builtin.live_grep, desc = "Live Grep" },
+	{ "<leader>fh", builtin.help_tags, desc = "Help Tags" },
+	{ "<leader>fi", builtin.lsp_implementations, desc = "LSP Implementations" },
+	{ "<leader>fk", builtin.keymaps, desc = "Keymaps" },
+	{ "<leader>ft", ":TodoTelescope<CR>", desc = "TODOs" },
+	{ "<leader>m", ":MarkdownPreviewToggle<CR>", desc = "Markdown Preview" },
+	{ "<leader>t", toggle_float, desc = "Terminal" },
+	{ "<leader>w", group = "+Window" },
+	{ "<leader>we", "<C-w>=", desc = "Equalize Splits" },
+	{ "<leader>wh", "<C-w>s", desc = "Horizontal Split" },
+	{ "<leader>wm", ":MaximizerToggle<CR>", desc = "Maximize" },
+	{ "<leader>wv", "<C-w>v", desc = "Vertical Split" },
+	{ "<leader>wx", ":close<CR>", desc = "Close Split" },
+})

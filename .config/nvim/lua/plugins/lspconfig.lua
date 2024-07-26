@@ -56,26 +56,22 @@ return {
 				callback = function()
 					local wk = require("which-key")
 
-					local leadermaps = {
-						l = {
-							name = "+LSP",
-							d = { vim.lsp.buf.definition, "Definition" },
-							D = { vim.lsp.buf.declaration, "Declaration" },
-							R = { vim.lsp.buf.references, "References" },
-							i = { vim.lsp.buf.implementation, "Implementations" },
-							t = { vim.lsp.buf.type_definition, "Type Definition" },
-							s = { vim.lsp.buf.signature_help, "Signature Help" },
-							h = { vim.lsp.buf.hover, "Hover Documentation" },
-							a = { vim.lsp.buf.code_action, "Code Action" },
-							f = { vim.lsp.buf.format, "Format" },
-							j = { vim.diagnostic.goto_next, "Next Diagnostic" },
-							k = { vim.diagnostic.goto_prev, "Prev Diagnostic" },
-							F = { vim.diagnostic.open_float, "Float Diagnostic" },
-							r = { vim.lsp.buf.rename, "Rename" },
-						},
-					}
-
-					wk.register(leadermaps, { prefix = "<leader>" })
+					wk.add({
+						{ "<leader>l", group = "+LSP" },
+						{ "<leader>ld", vim.lsp.buf.definition, desc = "Definition" },
+						{ "<leader>lD", vim.lsp.buf.declaration, desc = "Declaration" },
+						{ "<leader>lR", vim.lsp.buf.references, desc = "References" },
+						{ "<leader>li", vim.lsp.buf.implementation, desc = "Implementations" },
+						{ "<leader>lt", vim.lsp.buf.type_definition, desc = "Type Definition" },
+						{ "<leader>ls", vim.lsp.buf.signature_help, desc = "Signature Help" },
+						{ "<leader>lh", vim.lsp.buf.hover, desc = "Hover Documentation" },
+						{ "<leader>la", vim.lsp.buf.code_action, desc = "Code Action" },
+						{ "<leader>lf", vim.lsp.buf.format, desc = "Format" },
+						{ "<leader>lj", vim.diagnostic.goto_next, desc = "Next Diagnostic" },
+						{ "<leader>lk", vim.diagnostic.goto_prev, desc = "Prev Diagnostic" },
+						{ "<leader>lF", vim.diagnostic.open_float, desc = "Float Diagnostic" },
+						{ "<leader>lr", vim.lsp.buf.rename, desc = "Rename" },
+					})
 				end,
 			})
 
