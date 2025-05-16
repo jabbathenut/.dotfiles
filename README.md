@@ -1,8 +1,8 @@
 # Jabba's Dotfiles (MacOS)
 
-This is my personal repository of configuration files. While it works well for
-me and my workflow, it may not be what you expect or prefer. Please use this
-configuration with that in mind.
+This is my personal repository of configuration files for a Neovim C/C++
+development environment. While it works well for me and my workflow, it may not
+be what you expect or prefer. Please use this configuration with that in mind.
 
 Download to your home folder (i.e. ~/.dotfiles). Then install with GNU Stow:
 
@@ -12,6 +12,114 @@ stow .
 ```
 
 ## Notable Components
+
+### Neovim C/C++ Development Environment
+
+This configuration requires Neovim >= 0.11.
+
+#### Dependencies
+
+Installation uses Homebrew, unless otherwise indicated:
+
+- Neovim
+
+  ```zsh
+  brew install neovim
+  ```
+
+- JetBrains Mono Nerd Font
+
+  ```zsh
+  brew install --cask font-jetbrains-mono-nerd-font
+  ```
+
+- CMake
+
+  ```zsh
+  brew install cmake
+  ```
+
+- Git
+
+  ```zsh
+  brew install git
+  ```
+
+- Node.js and NPM
+
+  ```zsh
+  brew install node
+  ```
+
+- Ripgrep
+
+  ```zsh
+  brew install ripgrep
+  ```
+
+- Universal Ctags
+
+  ```zsh
+  brew install universal-ctags
+  ```
+
+- Lazygit
+
+  ```zsh
+  brew install jesseduffield/lazygit/lazygit
+  ```
+
+- ImageMagick
+
+  ```zsh
+  brew install imagemagick
+  ```
+
+- pylatexenc (LaTeX Parser)
+
+  ```zsh
+  pip install pylatexenc
+  ```
+
+- fd
+
+  ```zsh
+  brew install fd
+  ```
+
+#### LSPs
+
+The LSP configurations are stored in the ~/.config/nvim/lsp directory.
+Configurations located this directory are loaded automatically by Neovim. This
+feature was implemented in Neovim 0.11. These loaded configurations are then
+enabled and enhanced in the ~/.config/nvim/lua/config/lspconfig.lua file.
+
+- clangd
+- cmake-language-server (aka cmake)
+- lua-language-server (aka luals)
+- marksman
+
+#### Formatters/Linters
+
+- clang-format
+- cmakelang (includes cmake-format)
+- markdownlint-cli2
+- prettierd
+- stylua
+
+#### LSP-Related Plugins
+
+- mason.nvim
+- mason-tool-installer.nvim
+- blink.cmp (completion)
+- conform.nvim (formatting)
+- nvim-lint (linting)
+
+#### Quality of Life Plugins
+
+There are several QOL plugins that are not listed here, as they will likely
+change frequently. They can, however, be easily identified in the
+~/.config/nvim/lua/plugins directory.
 
 ### Window Manager
 
@@ -137,111 +245,3 @@ Installation uses Homebrew, unless otherwise indicated:
     ```zsh
     brew install imagemagick
     ```
-
-### Neovim C/C++ Development Environment
-
-This configuration requires Neovim >= 0.11.
-
-#### Dependencies
-
-Installation uses Homebrew, unless otherwise indicated:
-
-- Neovim
-
-  ```zsh
-  brew install neovim
-  ```
-
-- JetBrains Mono Nerd Font
-
-  ```zsh
-  brew install --cask font-jetbrains-mono-nerd-font
-  ```
-
-- CMake
-
-  ```zsh
-  brew install cmake
-  ```
-
-- Git
-
-  ```zsh
-  brew install git
-  ```
-
-- Node.js and NPM
-
-  ```zsh
-  brew install node
-  ```
-
-- Ripgrep
-
-  ```zsh
-  brew install ripgrep
-  ```
-
-- Universal Ctags
-
-  ```zsh
-  brew install universal-ctags
-  ```
-
-- Lazygit
-
-  ```zsh
-  brew install jesseduffield/lazygit/lazygit
-  ```
-
-- ImageMagick
-
-  ```zsh
-  brew install imagemagick
-  ```
-
-- pylatexenc (LaTeX Parser)
-
-  ```zsh
-  pip install pylatexenc
-  ```
-
-- fd
-
-  ```zsh
-  brew install fd
-  ```
-
-#### LSPs
-
-The LSP configurations are stored in the ~/.config/nvim/lsp directory.
-Configurations located this directory are loaded automatically by Neovim. This
-feature was implemented in Neovim 0.11. These loaded configurations are then
-enabled and enhanced in the ~/.config/nvim/lua/config/lspconfig.lua file.
-
-- clangd
-- cmake-language-server (aka cmake)
-- lua-language-server (aka luals)
-- marksman
-
-#### Formatters/Linters
-
-- clang-format
-- cmakelang (includes cmake-format)
-- markdownlint-cli2
-- prettierd
-- stylua
-
-#### LSP-Related Plugins
-
-- mason.nvim
-- mason-tool-installer.nvim
-- blink.cmp (completion)
-- conform.nvim (formatting)
-- nvim-lint (linting)
-
-#### Quality of Life Plugins
-
-There are several QOL plugins that are not listed here, as they will likely
-change frequently. They can, however, be easily identified in the
-~/.config/nvim/lua/plugins directory.
