@@ -1,0 +1,11 @@
+\.git
+\.gitignore
+\.gitmodules
+\.DS_Store
+\.clang-format
+
+^/LICENSE.*
+^/README.*
+^/COPYING
+
+^/screenshots
