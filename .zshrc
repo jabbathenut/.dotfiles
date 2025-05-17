@@ -10,18 +10,22 @@ else
 	echo "Running in arm64 mode."
 fi
 
-# Starship
+# Starship (custom terminal prompt)
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
-# Qt
-export PATH=/Users/jabba/Qt5.6.1/5.6/bin:$PATH
+# Eza (better ls)
+alias ls="eza --icons=always"
+
+# Zoxide (better cd)
+eval "$(zoxide init zsh)"
+alias cd="z"
 
 # Add python and pip aliases
 alias python=python3
 alias pip=pip3
 
-### YAZI SETUP ###
-
+### YAZI START ###
 # Set Yazi default editor
 export EDITOR="nvim"
 
@@ -35,3 +39,7 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+### YAZI END ###
+
+# Qt
+export PATH=/Users/jabba/Qt5.6.1/5.6/bin:$PATH

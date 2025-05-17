@@ -78,7 +78,7 @@ Installation uses Homebrew, unless otherwise indicated:
 - pylatexenc (LaTeX Parser)
 
   ```zsh
-  pip install pylatexenc
+  pip3 install pylatexenc
   ```
 
 - fd
@@ -121,6 +121,15 @@ There are several QOL plugins that are not listed here, as they will likely
 change frequently. They can, however, be easily identified in the
 ~/.config/nvim/lua/plugins directory.
 
+### Window Manager
+
+#### Aerospace
+
+- Install Aerospace using Homebrew:
+  ```zsh
+  brew install --cask nikitabobko/tap/aerospace
+  ```
+
 ### Shell Prompt
 
 #### Starship
@@ -149,6 +158,14 @@ change frequently. They can, however, be easily identified in the
   brew install eza
   ```
 
+#### Zoxide
+
+- Install Zoxide using Homebrew:
+
+  ```zsh
+  brew install zoxide
+  ```
+
 #### Tmux
 
 - Install Tmux using Homebrew:
@@ -157,12 +174,12 @@ change frequently. They can, however, be easily identified in the
   brew install tmux
   ```
 
-  Note: When tmux is first launched, it will automatically install the Tmux
-  Package Manager (TPM) to a ~/.tmux directory, which is not part of this
-  repository. This is done to keep the package manager (and associated plugins)
-  outside of source control. After TPM is installed, and while Tmux is open,
-  execute the following key combination to install the Tmux plugins: prefix + I
-  (capital I for install).
+Note: When tmux is first launched, it will automatically install the Tmux
+Package Manager (TPM) to a ~/.tmux directory, which is not part of this
+repository. This is done to keep the package manager (and associated plugins)
+outside of source control. After TPM is installed, and while Tmux is open,
+execute the following key combination to install the Tmux plugins: prefix + I
+(capital I for install).
 
 ### Terminal File Manager
 
@@ -243,3 +260,7 @@ Installation uses Homebrew, unless otherwise indicated:
     ```zsh
     brew install imagemagick
     ```
+
+```
+
+```
