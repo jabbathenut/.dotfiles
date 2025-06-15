@@ -127,6 +127,16 @@ There are several QOL plugins that are not listed here, as they will likely
 change frequently. They can, however, be easily identified in the
 ~/.config/nvim/lua/plugins directory.
 
+### Window Manager
+
+#### Aerospace
+
+- Install Aerospace using Homebrew:
+
+  ```zsh
+  brew install --cask nikitabobko/tap/aerospace
+  ```
+
 ### Shell Prompt
 
 #### Starship
