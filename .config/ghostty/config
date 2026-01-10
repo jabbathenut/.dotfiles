@@ -1,0 +1,26 @@
+# Font Settings
+font-family = "JetBrainsMono Nerd Font Mono"
+font-size = 14
+font-thicken = false
+
+# Cursor Settings
+cursor-style = block
+cursor-style-blink = true
+
+# Window Settings
+background-opacity = 0.85
+background-blur = 5
+window-padding-x = 4
+window-padding-y = 4
+window-padding-balance = true
+resize-overlay = never
+window-save-state = always
+
+# Appearance Settings
+theme = "Catppuccin Mocha"
+
+#Other Settings
+shell-integration = zsh
+copy-on-select = clipboard
+clipboard-trim-trailing-spaces = true
+mouse-hide-while-typing = true
