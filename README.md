@@ -150,7 +150,7 @@ Install Yazi and it's dependencies with Homebrew:
 
 ```zsh
 brew install yazi
-brew install brew install --cask font-jetbrains-mono-nerd-font
+brew install --cask font-jetbrains-mono-nerd-font
 brew install ffmpeg sevenzip jq poppler fd ripgrep fzf zoxide resvg imagemagick
 ```
 
