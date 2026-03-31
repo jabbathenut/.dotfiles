@@ -9,10 +9,6 @@ alias ls="eza --icons=always"
 eval "$(zoxide init zsh)"
 alias cd="z"
 
-# Add python and pip aliases
-alias python=python3.14
-alias pip=pip3.14
-
 ### YAZI START ###
 # Set Yazi default editor
 export EDITOR="nvim"

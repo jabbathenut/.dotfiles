@@ -3,7 +3,7 @@ return {
 	opts = {
 		formatters_by_ft = {
 			c = { "clang-format" },
-			cmake = { "cmake-format" },
+			cmake = { "gersemi" },
 			cpp = { "clang-format" },
 			json = { "prettierd", "prettier", stop_after_first = true },
 			lua = { "stylua" },

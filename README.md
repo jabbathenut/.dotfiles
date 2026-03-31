@@ -36,6 +36,7 @@ git config --global user.name "jabbathenut"
 git config --global user.email grimesje@protonmail.com
 git config --global core.editor nvim
 git config --global init.defaultBranch main
+git config --global core.excludesfile ~/.gitignore_global
 ```
 
 #### Ninja
@@ -192,11 +193,7 @@ brew install ripgrep
 brew install tree-sitter-cli
 brew install universal-ctags
 brew install lazygit
-brew install cmake-language-server
 ```
-
-Note: The cmake-language-server is installed via Homebrew, as their is an incompatibility conflict with the version
-Mason installs.
 
 ### Neovim Configuration Description
 
@@ -207,14 +204,14 @@ automatically by Neovim. This feature was implemented in Neovim 0.11. These load
 enhanced in the ~/.config/nvim/lua/config/lspconfig.lua file.
 
 - clangd
-- cmake-language-server (aka cmake)
+- neocmakelsp
 - lua-language-server (aka luals)
 - marksman
 
 #### Formatters/Linters
 
 - clang-format
-- cmakelang (includes cmake-format)
+- gersemi
 - markdownlint-cli2
 - prettierd
 - stylua

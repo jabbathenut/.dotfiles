@@ -27,9 +27,9 @@ vim.lsp.config("*", {
 -- These LSPs are defined in the lsp directory
 vim.lsp.enable({
 	"clangd",
-	"cmake",
 	"luals",
 	"marksman",
+	"neocmake",
 })
 
 --******************************

@@ -18,12 +18,13 @@ return {
 			ensure_installed = {
 				-- LSPs
 				-- "clangd", -- do not install clangd on macos, as apple clang is used instead
-				-- "cmake-language-server", -- install using Homebrew as the Mason version has an incompatibility conflict
+				"neocmakelsp",
 				"lua-language-server",
 				"marksman",
 				-- Formatters and Linters
 				"clang-format",
-				"cmakelang",
+				"gersemi",
+				-- "cmakelang",
 				"markdownlint-cli2",
 				"prettierd",
 				"stylua",
