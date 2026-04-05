@@ -76,7 +76,7 @@ wk.add({
 	-- Debugging
 	{ "<leader>d", group = "Debug" },
 	{ "<leader>db", dap.toggle_breakpoint, desc = "Toggle Breakpoint" },
-	{ "<leader>dd", dap.continue, desc = "Continue" },
+	{ "<leader>dc", dap.continue, desc = "Continue" },
 	{ "<leader>di", dap.step_into, desc = "Step Into" },
 	{ "<leader>dl", dap.list_breakpoints, desc = "List Breakpoints" },
 	{ "<leader>do", dap.step_out, desc = "Step Out" },

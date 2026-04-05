@@ -266,6 +266,7 @@ enhanced in the ~/.config/nvim/lua/config/lspconfig.lua file.
 #### Debuggers
 
 - codelldb (C/C++)
+- debugpy (Python)
 
 #### LSP-Related Plugins
 

@@ -32,6 +32,7 @@ return {
 				"stylua",
 				-- Debuggers
 				"codelldb",
+				"debugpy",
 			},
 		},
 	},
