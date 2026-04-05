@@ -21,9 +21,11 @@ return {
 				"neocmakelsp",
 				"lua-language-server",
 				"marksman",
+				"basedpyright", -- (type checking and autocompletion) paired with ruff
 				-- Formatters and Linters
 				"clang-format",
 				"gersemi",
+				"ruff", -- (linting and formatting) paired with basedpyright
 				-- "cmakelang",
 				"markdownlint-cli2",
 				"prettierd",

@@ -248,9 +248,10 @@ The LSP configurations are stored in the ~/.config/nvim/lsp directory. Configura
 automatically by Neovim. This feature was implemented in Neovim 0.11. These loaded configurations are then enabled and
 enhanced in the ~/.config/nvim/lua/config/lspconfig.lua file.
 
+- basedpyright
 - clangd
-- neocmakelsp
 - lua-language-server (aka luals)
+- neocmakelsp
 - marksman
 
 #### Formatters/Linters
@@ -259,6 +260,7 @@ enhanced in the ~/.config/nvim/lua/config/lspconfig.lua file.
 - gersemi
 - markdownlint-cli2
 - prettierd
+- ruff
 - stylua
 
 #### Debuggers

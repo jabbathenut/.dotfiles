@@ -8,6 +8,7 @@ return {
 			json = { "prettierd", "prettier", stop_after_first = true },
 			lua = { "stylua" },
 			markdown = { "prettierd", "prettier", stop_after_first = true },
+			python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
 		},
 		formatters = {
 			["clang-format"] = {

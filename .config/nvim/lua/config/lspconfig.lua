@@ -26,10 +26,12 @@ vim.lsp.config("*", {
 --******************************
 -- These LSPs are defined in the lsp directory
 vim.lsp.enable({
+	"basedpyright",
 	"clangd",
 	"luals",
 	"marksman",
 	"neocmake",
+	"ruff",
 })
 
 --******************************
@@ -60,6 +62,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			{ "<leader>lt", builtin.lsp_type_definitions, desc = "Go to Type Definition" },
 			{ "<leader>lW", builtin.lsp_workspace_symbols, desc = "Workspace Symbols" },
 		})
+
+		-- Setup Ruff to work with BasedPyright
+		if client.name == "ruff" then
+			client.server_capabilities.hoverProvider = false
+		end
 
 		-- Manage reference highlighting.
 		-- Create auto commands to:
