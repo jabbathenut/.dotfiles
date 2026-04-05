@@ -1,4 +1,5 @@
 .idea/
+.pyenv/
 .DS_Store
 Thumbs.db
 

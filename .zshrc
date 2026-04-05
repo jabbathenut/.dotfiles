@@ -24,3 +24,9 @@ function y() {
 	rm -f -- "$tmp"
 }
 ### YAZI END ###
+
+# pyenv and pyenv-virtualenv
+export PYENV_ROOT="$HOME/.pyenv" >> ~/.zshrc
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH" >> ~/.zshrc
+eval "$(pyenv init -)" >> ~/.zshrc
+eval "$(pyenv virtualenv-init -)" >> ~/.zshrc

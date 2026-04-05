@@ -65,13 +65,6 @@ Install Dotfiles from repository:
 Note: copy from repository location to home directory
 ```
 
-Symlink Dotfiles using Stow:
-
-```zsh
-cd ~/.dotfiles
-stow .
-```
-
 ### Install Terminal Items
 
 ##### Nerd Font
@@ -173,6 +166,64 @@ function y() {
 	rm -f -- "$tmp"
 }
 ### YAZI END ###
+```
+
+### Symlink Dotfiles (Must occur before Python and Neovim installations)
+
+Symlink Dotfiles using Stow:
+
+```zsh
+cd ~/.dotfiles
+stow .
+```
+
+### Install Python and Related Items (Must be done after dotfiles symlink)
+
+Install prerequisites:
+
+```zsh
+brew install openssl readline sqlite3 xz zlib tcl-tk
+```
+
+Install pyenv and pyenv-virtualenv
+
+```zsh
+brew install pyenv
+brew install pyenv-virtualenv
+```
+
+Create .pyenv directory for python version management
+
+```zsh
+mkdir ~/.dotfiles/.pyenv
+```
+
+Add the following to .zshrc
+
+```zsh
+# pyenv and pyenv-virtualenv
+export PYENV_ROOT="$HOME/.pyenv" >> ~/.zshrc
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH" >> ~/.zshrc
+eval "$(pyenv init -)" >> ~/.zshrc
+eval "$(pyenv virtualenv-init -)" >> ~/.zshrc
+```
+
+Close terminal and reopen to adopt new .zshrc settings
+
+Install current python version and set it to the global version
+
+```zsh
+pyenv install 3.x.x
+pyenv global 3.x.x
+```
+
+Install virtual environment for Neovim
+
+```zsh
+pyenv virtualenv 3.x.x neovim-env
+pyenv activate neovim-env
+pip install pynvim
+pyenv deactivate
 ```
 
 ### Install Neovim and Related Items
