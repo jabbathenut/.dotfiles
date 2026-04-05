@@ -192,12 +192,6 @@ brew install pyenv
 brew install pyenv-virtualenv
 ```
 
-Create .pyenv directory for python version management
-
-```zsh
-mkdir ~/.dotfiles/.pyenv
-```
-
 Add the following to .zshrc
 
 ```zsh
