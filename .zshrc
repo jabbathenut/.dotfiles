@@ -30,3 +30,10 @@ export PYENV_ROOT="$HOME/.pyenv" >> ~/.zshrc
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH" >> ~/.zshrc
 eval "$(pyenv init -)" >> ~/.zshrc
 eval "$(pyenv virtualenv-init -)" >> ~/.zshrc
+
+# Maya environment variables
+export MAYA_LOCATION=/Applications/Autodesk/maya2027/Maya.app/Contents
+export DYLD_LIBRARY_PATH=$MAYA_LOCATION/MacOS
+export DYLD_FRAMEWORK_PATH=$MAYA_LOCATION/Frameworks
+export DEVKIT_LOCATION=$HOME/Developer/Plug-ins/Maya/DevKit/2027
+
