@@ -16,6 +16,10 @@ window-padding-balance = true
 resize-overlay = never
 window-save-state = always
 
+# Quick Terminal
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
+quick-terminal-position = center
+
 # Appearance Settings
 theme = "Catppuccin Mocha"
 
