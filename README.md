@@ -220,6 +220,15 @@ pip install pynvim
 pyenv deactivate
 ```
 
+Install virtual environment for Conan package manager
+
+```zsh
+pyenv virtualenv 3.x.x conan-env
+pyenv activate conan-env
+pip install conan
+pyenv deactivate
+```
+
 ### Install Neovim and Related Items
 
 #### Neovim and it's dependencies
