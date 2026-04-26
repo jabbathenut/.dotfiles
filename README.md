@@ -238,6 +238,7 @@ brew install ripgrep
 brew install tree-sitter-cli
 brew install universal-ctags
 brew install lazygit
+brew install rust
 ```
 
 ### Neovim Configuration Description
