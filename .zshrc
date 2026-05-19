@@ -37,3 +37,7 @@ export DYLD_LIBRARY_PATH=$MAYA_LOCATION/MacOS
 export DYLD_FRAMEWORK_PATH=$MAYA_LOCATION/Frameworks
 export DEVKIT_LOCATION=$HOME/Developer/Plug-ins/Maya/DevKit/2027
 
+# VCPKG environment variables
+export VCPKG_ROOT=$HOME/vcpkg
+export PATH=$VCPKG_ROOT:$PATH
+export VCPKG_DISABLE_METRICS=1
