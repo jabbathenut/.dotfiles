@@ -1,0 +1,45 @@
+# ------------------------------------------------------------------------
+# cmake-format default configuration
+# Generated via `cmake-format --dump-config yaml --no-help`
+# ------------------------------------------------------------------------
+
+# Options affecting formatting.
+format:
+  disable: false
+  line_width: 120
+  tab_size: 2
+  use_tabchars: false
+  dangle_parens: false
+  min_prefix_chars: 4
+  max_prefix_chars: 10
+  max_lines_for_kwarg: 2
+  separate_ctrl_name_with_space: false
+  separate_fn_name_with_space: false
+  max_positional_arguments: 2
+  command_case: 'lower'
+  keyword_case: 'unchanged'
+
+# Options affecting comment reflow and markup parsing.
+markup:
+  enable_markup: true
+  first_comment_is_literal: false
+  literal_comment_pattern: null
+  fence_start: '^\s*([`~]{3}[`~]*)(.*)$'
+  fence_end: '^\s*([`~]{3}[`~]*)$'
+  bullet_char_policy: 'auto'
+
+# Options affecting listfile parsing.
+parse:
+  additional_commands: {}
+
+# Options affecting behavior of cmake-lint
+lint:
+  disabled_codes: []
+  function_pattern: '[a-z_]+'
+  macro_pattern: '[a-z_]+'
+  global_var_pattern: '[A-Z][A-Z0-9_]+'
+  internal_var_pattern: '_[A-Z][A-Z0-9_]+'
+  local_var_pattern: '[a-z_][a-z0-9_]+'
+  private_var_pattern: '_[a-z_][a-z0-9_]+'
+  public_stub_pattern: '[A-Z][A-Z0-9_]+'
+
