@@ -1,0 +1,85 @@
+# *****************************************************************************
+# This configuration is designed to work with BasedPyright
+# Basedpyright handles static type checking, symbol resolution, and semantic
+# analysis, while Ruff handles style, formatting, import sorting, and fast
+# AST-based linting.
+# *****************************************************************************
+
+line-length = 88
+indent-width = 4
+target-version = "py312"
+
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+]
+
+[lint]
+# E/W: pycodestyle
+# F:   Pyflakes (kept for fast auto-fixing of unused imports F401)
+# I:   isort (import sorting)
+# B:   flake8-bugbear
+# UP:  pyupgrade
+# SIM: flake8-simplify
+# TC:  flake8-type-checking (moves typing-only imports into TYPE_CHECKING blocks)
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "TC"]
+
+ignore = [
+    "E501",   # Line length handled by Ruff formatter
+    # --- Basedpyright Overlap Prevention ---
+    "F821",   # Undefined name (Basedpyright handles symbol resolution & scoping much better)
+    "F841",   # Unused local variable (Basedpyright's reportUnusedVariable is type-aware)
+    "UP037",  # Quoted type annotations (sometimes needed for forward references in Basedpyright)
+]
+
+fixable = ["ALL"]
+unfixable = []
+
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[lint.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/**/*.py" = ["S101", "PLR2004"]
+
+[lint.isort]
+combine-as-imports = true
+force-sort-within-sections = true
+
+[lint.flake8-type-checking]
+# Prevents Ruff from moving imports into TYPE_CHECKING if libraries like Pydantic,
+# FastAPI, or dataclasses need them evaluated at runtime.
+runtime-evaluated-base-classes = ["pydantic.BaseModel"]
+runtime-evaluated-decorators = ["dataclasses.dataclass", "attrs.define"]
+
+[format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
+

@@ -1,0 +1,64 @@
+{
+  // **************************************************************************
+  // This configuration is intended to work alongside SoloMD.
+  // It is part of a two-layer setup using Prettier for auto-formatting and
+  // markdownlint-cli2 for structural linting. As well, SoloMD's internal
+  // folders are ignored.
+  // **************************************************************************
+
+  // Exclude SoloMD workspace folders and common build/dependency directories
+  "ignores": [
+    "**/.solomd/**",
+    "**/_assets/**",
+    "**/node_modules/**"
+  ],
+
+  "config": {
+    // Enable all rules by default, then customize for SoloMD compatibility
+    "default": true,
+
+    // --- HEADINGS & FRONT MATTER ---
+
+    // ATX-style headings (# Heading) match SoloMD's toolbar and shortcuts
+    "MD003": { "style": "atx" },
+    // Allow trailing punctuation in headings (common in notes and CJK writing)
+    "MD026": false,
+    // Allow YAML front matter to carry the document title instead of requiring an H1 on line 1
+    "MD041": { "front_matter_title": "^\\s*title\\s*[:=]" },
+
+    // --- LISTS & BLOCKQUOTES (Aligned with SoloMD & Prettier) ---
+
+    // SoloMD formats unordered lists with "-" (e.g., "- " and "> - ")
+    "MD004": { "style": "dash" },
+    // Standard 2-space nested list indentation
+    "MD007": { "indent": 2 },
+    // Sequential numbering (1. 2. 3.) matches SoloMD's nested ordered-list alignment
+    "MD029": { "style": "ordered" },
+    // Allow multiple spaces after list markers if mixed with CJK spacing
+    "MD030": false,
+
+    // --- LINE LENGTH & WHITESPACE ---
+    // Disable line-length limits for prose paragraphs, tables, and KaTeX blocks
+    "MD013": false,
+    // Allow 2 trailing spaces for hard line breaks, or disable strict trailing-space errors
+    "MD009": { "br_spaces": 2, "strict": false },
+
+    // --- SoloMD EXTENDED SYNTAX ---
+
+    // Allow inline and block HTML (SoloMD renders embedded HTML tags natively)
+    "MD033": false,
+    // Allow bare URLs without angle brackets (GFM autolinks)
+    "MD034": false,
+    // Allow bold/emphasis lines to act as pseudo-headings in quick notes
+    "MD036": false,
+    // Disable spaces-inside-emphasis checks to prevent false positives on CJK punctuation and ==highlights==
+    "MD037": false,
+    // Allow fenced code blocks without a language (or custom fences like ```tldraw, ```mermaid)
+    "MD040": false,
+    // Keep fenced code blocks consistent with backticks (```)
+    "MD048": { "style": "backtick" },
+    // Keep emphasis markers consistent with SoloMD's formatting bubble (*italic* and **bold**)
+    "MD049": { "style": "asterisk" },
+    "MD050": { "style": "asterisk" }
+  }
+}

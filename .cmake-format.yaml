@@ -1,0 +1,42 @@
+# ------------------------------------------------------------------------
+# cmake-format default configuration
+# Generated via `cmake-format --dump-config yaml --no-help`
+# ------------------------------------------------------------------------
+
+# Formatting options for cmakelang (cmake-format)
+format:
+  # Maximum line length before wrapping
+  line_width: 80
+
+  # Number of spaces per indentation level
+  tab_size: 2
+  use_tabchars: false
+
+  # Force modern CMake lowercase commands (e.g., add_library instead of ADD_LIBRARY)
+  command_case: "lower"
+
+  # Keep keyword arguments uppercase (e.g., PUBLIC, PRIVATE, REQUIRED)
+  keyword_case: "upper"
+
+  # Drop the first argument onto a new line whenever the command name + '('
+  # is longer than (tab_size + max_prefix_chars). Setting this to 0 or 2
+  # forces almost all multi-line commands to indent from the next line.
+  # Also, lower the min_prefix_chars to 0 from the default of 4.
+  max_prefix_chars: 1
+  min_prefix_chars: 0
+
+  # Break long argument lists onto separate lines for cleaner git diffs
+  max_pargs_hwrap: 2
+  max_subgroups_hwrap: 2
+  max_subargs_per_line: 2
+
+  # Drop closing parentheses to a new line
+  dangle_parens: true
+
+  # Sort lists (such as source files) alphabetically when safe
+  autosort: true
+
+markup:
+  # Prevent cmake-format from re-flowing ASCII art or custom header banners
+  first_comment_is_literal: true
+  enable_markup: false
